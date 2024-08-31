@@ -1,9 +1,22 @@
 package br.com.cursopcv.modelo;
 
+//import org.hibernate.annotations.Entity;
+//import org.hibernate.annotations.Table;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "produtos")
 public class Produto {
-    public String nome;
-    public String descricao;
-    public double preco;
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String nome;
+    private String descricao;
+    private double preco;
 
     public Produto(String nome, String descricao, double preco) {
         this.nome = nome;
