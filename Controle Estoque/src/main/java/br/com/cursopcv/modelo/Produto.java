@@ -11,7 +11,7 @@ public class Produto {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Define auto-incremento para o campo 'cod'
+    @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Long cod;
 
     private String nome;
